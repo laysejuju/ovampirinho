@@ -1,6 +1,3 @@
-
-
-
 function inicializar(){
 	var tela = document.getElementById("tela");
 	var c = tela.getContext("2d");	
