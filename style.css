@@ -42,8 +42,8 @@ body{
 
 .control{
 	border: solid #0000ff;
-	width:400px;
-	height:400px;
+	width:130px;
+	height:130px;
 	position: absolute;
 	bottom: 0;
 }
