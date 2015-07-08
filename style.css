@@ -1,7 +1,25 @@
 body{
 	margin: 0 auto;
 	font-family: 'Patrick Hand SC', cursive;
-	
+
+}
+
+#wrapper{
+	max-width: 1280px;
+	max-height: 720px;
+	position: relative;
+	top:0;
+	left:0;
+}
+
+
+#menu{
+position:absolute;
+bottom:80px;
+left:25%;
+height: 70%;
+width: 50%;
+background-color: #ccc;
 }
 
 #tela{
