@@ -9,10 +9,28 @@
     </head>   
     <body>
 		<div id="wrapper">
-				<canvas id="tela"></canvas> <!-- Tela criada-->
+				<canvas id="canvas" width="1820px" height="720px"></canvas> <!-- Tela criada-->
 				<div onclick="inicializar();" id="menu"></div>
+				<div onclick="inicializar();" id="gameOver"></div>
 				<div onclick="onLeft();" id="left" class="control"></div>
 				<div onclick="onRight();" id="right" class="control"></div>
+				
+				<audio id="denteUp">       
+					<source src="audio/ponto.mp3" type="audio/mpeg" />
+					Navegador não suporta HTML5 audio!
+				</audio>
+				<audio id="perdeLife">       
+					<source src="audio/vida.mp3" type="audio/mpeg" />
+					Navegador não suporta HTML5 audio!
+				</audio>
+				<audio id="winSound">       
+					<source src="audio/win.mp3" type="audio/mpeg" />
+					Navegador não suporta HTML5 audio!
+				</audio>
+				<audio id="winLife">       
+					<source src="audio/winLife.mp3" type="audio/mpeg" />
+					Navegador não suporta HTML5 audio!
+				</audio>
 				
 		</div>
 	</body>
