@@ -26,23 +26,23 @@
 				winSound.pause();
 				winLife.pause();
 				
-				jogadorAltura = 150;
-				jogadorLargura = 150;
+				jogadorAltura = 170;
+				jogadorLargura = 170;
 				bolaDiametro = 10;
 				
 				life = 3;
 				
-				lifeLargura = 40;
-				lifeAltura = 31;
+				lifeLargura = 60;
+				lifeAltura = 51;
 				
-				lifeLargura1 = 40;
-				lifeAltura1 = 31;
+				lifeLargura1 = 60;
+				lifeAltura1 = 51;
 				
-				lifeLargura2 = 40;
-				lifeAltura2 = 31;
+				lifeLargura2 = 60;
+				lifeAltura2 = 51;
 				
-				lifeLargura3 = 40;
-				lifeAltura3 = 31;
+				lifeLargura3 = 60;
+				lifeAltura3 = 51;
 				
 				lifePosX = canvas.width / 1;
 				lifePosY = -10;
@@ -56,16 +56,16 @@
 				canvas = document.getElementById("canvas");
 				c = canvas.getContext("2d");	
 
-				bolaLargura = 28;
-                bolaAltura = 28;
+				bolaLargura = 38;
+                bolaAltura = 38;
 				
                 bolaPosX = canvas.width / 2;
                 bolaPosY = -10;
 				velocidadeBola = 10;
 				colisao = false;
 				
-				cruzLargura = 20;
-                cruzAltura = 28;
+				cruzLargura = 35;
+                cruzAltura = 43;
 				cruzPosX = canvas.width / 3;
                 cruzPosY = -10;
 				velocidadecruz = 11;
@@ -84,7 +84,7 @@
 				{
 					if(jogadorPosicaoX > 0)
 					{
-						jogadorPosicaoX -= velocidadeJogador;
+						jogadorPosicaoX -= 45;
 					}
 				}
 				
@@ -92,17 +92,30 @@
 				{
 					if(jogadorPosicaoX < (canvas.width - jogadorLargura))
 					{
-						jogadorPosicaoX += velocidadeJogador;
+						jogadorPosicaoX += 45;
 					}
 				}
 			}
 			
 			//comandos do Smartphone
 				
+				
+			/*	document.getElementById("left").addEventListener("onmousedown", function(){
+					while(jogadorPosicaoX > 0){
+							jogadorPosicaoX -= 45;
+					}
+				});
+				
+				document.getElementById("left").addEventListener("onmouseup", function(){
+					
+					
+				});*/
+				
 				function onLeft(){
+					
 					if(jogadorPosicaoX > 0)
 						{
-							jogadorPosicaoX -= 30;
+							jogadorPosicaoX -= 45;
 						}
 					//jogadorPosicaoX -= 25;
 					console.log("Left!");
@@ -111,7 +124,7 @@
 				function onRight(){
 					if(jogadorPosicaoX < (canvas.width - jogadorLargura))
 						{
-							jogadorPosicaoX += 30;
+							jogadorPosicaoX += 45;
 						}
 					//jogadorPosicaoX +=25;
 					console.log("Right!");
@@ -212,7 +225,7 @@
 				}
 				else
 				{
-					bolaPosX = Math.random() * 600;
+					bolaPosX = Math.random() * 1810;
 					bolaPosY = -10;
 					colisao = false;
 				}
@@ -230,7 +243,7 @@
 				}
 				else
 				{
-					cruzPosX = Math.random() * 600;
+					cruzPosX = Math.random() * 1810;
 					cruzPosY = -10;
 					
 				}
@@ -248,7 +261,7 @@
 					}
 					else
 					{
-						lifePosX = Math.random() * 600;
+						lifePosX = Math.random() * 1810;
 						lifePosY = -20;
 						
 					}
@@ -257,7 +270,7 @@
 			// Checar Colisão
 				
 				//score
-				if((bolaPosX > jogadorPosicaoX && bolaPosX < jogadorPosicaoX + jogadorLargura) && bolaPosY >= (canvas.height - jogadorAltura-10) - 200 && cruzPosY <= (canvas.height-200) && colisao == false)
+				if((bolaPosX > jogadorPosicaoX && bolaPosX < jogadorPosicaoX + jogadorLargura) && bolaPosY >= (canvas.height - jogadorAltura-10) - 100 && cruzPosY <= (canvas.height-200) && colisao == false)
 				{
 					score++;
 					denteUp.play();
@@ -266,8 +279,8 @@
 					
 				}
 				
-				//ganhar vida
-				if((lifePosX > jogadorPosicaoX && lifePosX < jogadorPosicaoX + jogadorLargura) && lifePosY >= (canvas.height - jogadorAltura) - 200 /*Esse "200" é do chão*/ && lifePosY <= (canvas.height - 200) && colisao == false)
+				//Recupera vida
+				if((lifePosX > jogadorPosicaoX && lifePosX < jogadorPosicaoX + jogadorLargura) && lifePosY >= (canvas.height - jogadorAltura) - 100 /*Esse "200" é do chão*/ && lifePosY <= (canvas.height - 200) && colisao == false)
 					{
 						
 							life++;
@@ -279,20 +292,20 @@
 												
 							if(life == 3){
 								canvas.style.background="#0C1222";
-								lifeLargura3 = 38;
-								lifeAltura3 = 31;
+								lifeLargura3 = 60;
+								lifeAltura3 = 51;
 							
 							}if(life == 2){
 								canvas.style.background="#0C1222";
 								console.log(life);
-								lifeLargura2 = 38;
-								lifeAltura2 = 31;
+								lifeLargura2 = 60;
+								lifeAltura2 = 51;
 						
 							}if(life == 1){
 							
 								canvas.style.background="#0C1222";
-								lifeLargura1 = 38;
-								lifeAltura1 = 31;
+								lifeLargura1 = 60;
+								lifeAltura1 = 51;
 								
 							}if(life > 3){
 								life--;
@@ -302,7 +315,7 @@
 					}
 				
 				//Perder vida
-				if((cruzPosX > jogadorPosicaoX && cruzPosX < jogadorPosicaoX + jogadorLargura) && cruzPosY >= (canvas.height - jogadorAltura) - 200 /*Esse "200" é do chão*/ && cruzPosY <= (canvas.height - 200) && colisao == false)
+				if((cruzPosX > jogadorPosicaoX && cruzPosX < jogadorPosicaoX + jogadorLargura) && cruzPosY >= (canvas.height - jogadorAltura) - 100 /*Esse "200" é do chão*/ && cruzPosY <= (canvas.height - 200) && colisao == false)
 				{
 					life--;
 					perdeLife.play();
@@ -334,7 +347,7 @@
 				}		
 					
 						
-				// Escreve placar
+				// Escreve placar e Life
                 c.font = "32pt Tahoma";
 				c.fillText(score, canvas.width - 70, 50);
 				
@@ -349,8 +362,8 @@
 				life3.src = 'image/life.png';
 				
 				c.drawImage(life1, 25, 30, lifeLargura1, lifeAltura1);
-				c.drawImage(life2, 70, 30, lifeLargura2, lifeAltura2);
-				c.drawImage(life3, 115, 30, lifeLargura3, lifeAltura3);
+				c.drawImage(life2, 90, 30, lifeLargura2, lifeAltura2);
+				c.drawImage(life3, 155, 30, lifeLargura3, lifeAltura3);
 				
 				
 				//Níveis
@@ -454,15 +467,15 @@
 				var imagem = new Image();
 				imagem.src = 'image/vampiro.png';
 	
-				c.drawImage(imagem, jogadorPosicaoX, (canvas.height - jogadorAltura) - 170, jogadorLargura, jogadorAltura);
+				c.drawImage(imagem, jogadorPosicaoX, (canvas.height - jogadorAltura) - 100, jogadorLargura, jogadorAltura);
 
 				//chão
-				c.fillRect(0, 550, 1820, 20);
+				c.fillRect(0, 620, 1820, 20);
 				c.fillStyle="#3BBD62";
 			
 				c.fill();
 
-				c.fillRect(0, 570, 1820, 180);
+				c.fillRect(0, 640, 1820, 80);
 				c.fillStyle="#0B8C32";
 				c.fill();
 			
