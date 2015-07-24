@@ -19,12 +19,6 @@ body{
 }
 
 .logo{
-
-}
-
-#oVampirinho{
-	background-image: url(image/logo-vampirinho.png);
-	background-size: 263px 85px;
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 85px;
@@ -34,6 +28,11 @@ body{
 	margin-top:15px;
 }
 
+#oVampirinho{
+	background-image: url(image/logo-vampirinho.png);
+	background-size: 263px 85px;
+}
+
 #menu{
 	position:absolute;
 	top:82px;
@@ -41,6 +40,26 @@ body{
 	height: 70%;
 	width: 50%;
 	background-color: #DBC300;
+}
+
+.botao{
+	background-color:#ccc;
+	width:235px;
+	height: 55px;
+	position: absolute;
+	top: 0px;
+	margin-left: 3em;
+	text-align: center;
+	padding-top: 30px;
+}
+
+#jogar{
+	margin-top: 2.5em;
+	
+}
+
+#help{
+	margin-top: 9em;
 }
 
 #gameOver{

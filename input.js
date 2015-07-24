@@ -186,7 +186,7 @@
 				
 					clearInterval(iniciar);
 					
-					document.getElementById('gameOver').style.display="block";
+					document.getElementById('menu').style.display="block";
 					c.fillStyle="#fff";
 					c.font="35px Arial";
 					c.fillText(score,500,380);
