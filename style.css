@@ -1,3 +1,10 @@
+/*PALETA DE CORES
+#05001C (blue)
+#DBC300 (yellow)
+#D4270B (salmao)
+#09BA6D (green blue)
+*/
+
 body{
 	margin: 0 auto;
 	font-family: 'Patrick Hand SC', cursive;
@@ -11,14 +18,29 @@ body{
 	position: absolute;	
 }
 
+.logo{
+
+}
+
+#oVampirinho{
+	background-image: url(image/logo-vampirinho.png);
+	background-size: 263px 85px;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 85px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	margin-top:15px;
+}
 
 #menu{
 	position:absolute;
-	top:80px;
+	top:82px;
 	left:25%;
 	height: 70%;
 	width: 50%;
-	background-color: #ccc;
+	background-color: #DBC300;
 }
 
 #gameOver{

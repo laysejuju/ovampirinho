@@ -19,6 +19,7 @@
 			
 			document.getElementById('menu').style.display="none";
 			document.getElementById('gameOver').style.display="none";
+			document.getElementById('oVampirinho').style.display="none";
 			canvas.style.background="#0C1222";
 			
 				denteUp.pause();
