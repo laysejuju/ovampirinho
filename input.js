@@ -202,7 +202,7 @@
 				}
 				else
 				{
-					bolaPosX = Math.random() * 1810;
+					bolaPosX = Math.random() * 1790;
 					bolaPosY = -10;
 					colisao = false;
 				}
@@ -220,7 +220,7 @@
 				}
 				else
 				{
-					cruzPosX = Math.random() * 1810;
+					cruzPosX = Math.random() * 1790;
 					cruzPosY = -10;
 					
 				}
@@ -238,7 +238,7 @@
 					}
 					else
 					{
-						lifePosX = Math.random() * 1810;
+						lifePosX = Math.random() * 1790;
 						lifePosY = -20;
 						
 					}
