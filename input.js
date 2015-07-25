@@ -20,6 +20,10 @@
 			document.getElementById('menu').style.display="none";
 			document.getElementById('gameOver').style.display="none";
 			document.getElementById('oVampirinho').style.display="none";
+			document.getElementById('vitoria').style.display="none";
+			document.getElementById('jogar').innerHTML="Go!";
+			
+
 			canvas.style.background="#0C1222";
 			
 				denteUp.pause();
@@ -134,48 +138,19 @@
 			//Win!
 			function win(){
 				clearInterval(iniciar);
-			
+					document.getElementById('vitoria').style.display="block";
 			
 				var diamante = new Image();
 					diamante.src = 'image/diamente.png';
 					
 					diamante.onload = function(){
-						c.drawImage(diamante, 435, 125, 200, 128);
+						c.drawImage(diamante, 800, 125, 200, 128);
 					}
-					
-				c.fillStyle="#FFCA17"; 
-				c.fillRect(playx,playy,170,50);
-				c.fill();
-					
-				c.fillStyle="#10096C";
-				c.font="35px Arial";
-				c.fillText("REPLAY",467,308);
 					
 				c.fillStyle="#fff";
 				c.font="35px Arial";
-				c.fillText(score,500,380);
-				c.fillText("DENTES",460,420);
-				
-				c.fillStyle="#fff";
-				c.font="14px Arial";
-				c.fillText("Desenvolvido por Layse Julyanne - 2015",400,30);	
-					
-				c.fillStyle="#fff";
-				c.fillText("Colaboradores: Isabelly Maria - Ideia; José Carlos, Paulo Henrique, Kamylla Silva e Julio Ximenes Jr. - Apoio",180,50);	
-
-				
-					
-				//Botão Reset
-				function clicouReset2(e){
-					var x = e.pageX - canvas.offsetLeft;
-					var y = e.pageY - canvas.offsetTop;
-
-					if((x > playx)&& (x < playx+170) && (y > playy-1) && (y < playy+50)){
-						reset();	
-					}
-				}
-					
-				canvas.onclick = clicouReset2;
+				c.fillText(score,890,380);
+				c.fillText("DENTES",840,420);	
 			
 			}
 			
@@ -185,8 +160,9 @@
 				function gameover(){
 				
 					clearInterval(iniciar);
-					
+					document.getElementById('gameOver').style.display="block";
 					document.getElementById('menu').style.display="block";
+					document.getElementById('jogar').innerHTML="Mais uma vez";
 					c.fillStyle="#fff";
 					c.font="35px Arial";
 					c.fillText(score,500,380);
@@ -412,8 +388,6 @@
 				if(score >= 100){
 					velocidadeBola = 30;
 					velocidadecruz = 31;
-					c.fillStyle="#FFCA17";
-					c.fillText("Parabéns! Você ganhou! :D",280,110);
 					win();
 					winSound.play();
 				}

@@ -44,8 +44,8 @@ body{
 
 .botao{
 	background-color:#ccc;
-	width:235px;
-	height: 55px;
+	width:72%;
+	height: 20%;
 	position: absolute;
 	top: 0px;
 	margin-left: 3em;
@@ -54,22 +54,34 @@ body{
 }
 
 #jogar{
-	margin-top: 2.5em;
-	
+	margin-top: 2.5em;	
 }
 
 #help{
 	margin-top: 9em;
 }
 
+#vitoria{
+	font-family:sans-serif;
+	color:#DBC300;
+	font-size:18pt;
+	display:none;
+	position:absolute;
+	top:0;
+	left:28%;
+	height:85px;
+	width: 50%;
+}
+
 #gameOver{
 	display:none;
 	position:absolute;
-	top:80px;
+	top:0;
 	left:25%;
-	height: 70%;
+	height:85px;
 	width: 50%;
-	background-color: #ccc;
+	background-image: url(image/game-over.png);
+	background-size: 263px 85px;
 }
 
 #canvas{
