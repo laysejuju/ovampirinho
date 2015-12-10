@@ -13,10 +13,26 @@
 				<canvas id="canvas" width="1820px" height="720px"></canvas> <!-- Tela criada-->
 				<div onmousedown="onLeft();" id="left" class="control"></div>
 				<div onmousedown="onRight();" id="right" class="control"></div>
-				<div id="menu">
+				<div id="menuInicial" class="menu">
+					<div id="record">AJUDE O VAMPIRINHO A PEGAR 100 DENTES</div>
 					<div onclick="inicializar();" id="jogar" class="botao">GO!</div>
-					<div id="help" class="botao">Tutorial</div>
+					<div id="help">&lt;&lt;Use os cantos nas laterais para&gt;&gt; controlar o vampirinho</div>
+					<!--<div id="record">MELHOR PLACAR</div>-->
+					
+					<!--<div id="recordValue">0</div>-->
 				</div>
+				
+				<div id="menuGameOver" class="menu">
+					<div id="record">QUE PENA! VOCÊ PERDEU :(</div>
+					<div onclick="inicializar();" id="jogar2" class="botao">GO!</div>
+					<div id="pontuacao"></div>
+				</div>
+				
+				<div id="win">
+					<h1>Parabéns! Você conseguiu!<h1>
+					<div onclick="inicializar();" id="jogar3" class="botao">De novo?</div>
+				</div>
+				
 				<div id="gameOver" class="logo"></div>
 				<div id="oVampirinho" class="logo"></div>
 				<div id="vitoria" class="logo">Parabéns! Você ganhou! :D</div>

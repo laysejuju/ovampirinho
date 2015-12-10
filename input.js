@@ -16,8 +16,9 @@
 			//Inicio do jogo
 			function inicializar()
 			{
-			
-			document.getElementById('menu').style.display="none";
+			document.getElementById('menuInicial').style.display="none";
+			document.getElementById('menuGameOver').style.display="none";
+			document.getElementById('win').style.display="none";
 			document.getElementById('gameOver').style.display="none";
 			document.getElementById('oVampirinho').style.display="none";
 			document.getElementById('vitoria').style.display="none";
@@ -37,16 +38,16 @@
 				
 				life = 3;
 				
-				lifeLargura = 60;
+				lifeLargura = 70;
 				lifeAltura = 51;
 				
-				lifeLargura1 = 60;
+				lifeLargura1 = 70;
 				lifeAltura1 = 51;
 				
-				lifeLargura2 = 60;
+				lifeLargura2 = 70;
 				lifeAltura2 = 51;
 				
-				lifeLargura3 = 60;
+				lifeLargura3 = 70;
 				lifeAltura3 = 51;
 				
 				lifePosX = canvas.width / 1;
@@ -138,7 +139,7 @@
 			//Win!
 			function win(){
 				clearInterval(iniciar);
-					document.getElementById('vitoria').style.display="block";
+					document.getElementById('win').style.display="block";
 			
 				var diamante = new Image();
 					diamante.src = 'image/diamente.png';
@@ -146,29 +147,20 @@
 					diamante.onload = function(){
 						c.drawImage(diamante, 800, 125, 200, 128);
 					}
-					
-				c.fillStyle="#fff";
-				c.font="35px Arial";
-				c.fillText(score,890,380);
-				c.fillText("DENTES",840,420);	
 			
 			}
-			
 			
 			//Menu Game Over
 				
 				function gameover(){
 				
+					
 					clearInterval(iniciar);
 					document.getElementById('gameOver').style.display="block";
-					document.getElementById('menu').style.display="block";
-					document.getElementById('jogar').innerHTML="Mais uma vez";
-					c.fillStyle="#fff";
-					c.font="35px Arial";
-					c.fillText(score,500,380);
-					c.fillText("DENTES",460,420);
+					document.getElementById('menuGameOver').style.display="block";
+					document.getElementById('jogar2').innerHTML="GO!";
+					document.getElementById('pontuacao').innerHTML=score + "</br>" + "DENTES";
 					
-		
 					//Botão Reset
 					function clicouReset(e){
 						var x = e.pageX - canvas.offsetLeft;
@@ -269,19 +261,19 @@
 												
 							if(life == 3){
 								canvas.style.background="#0C1222";
-								lifeLargura3 = 60;
+								lifeLargura3 = 70;
 								lifeAltura3 = 51;
 							
 							}if(life == 2){
 								canvas.style.background="#0C1222";
 								console.log(life);
-								lifeLargura2 = 60;
+								lifeLargura2 = 70;
 								lifeAltura2 = 51;
 						
 							}if(life == 1){
 							
 								canvas.style.background="#0C1222";
-								lifeLargura1 = 60;
+								lifeLargura1 = 70;
 								lifeAltura1 = 51;
 								
 							}if(life > 3){
@@ -313,7 +305,8 @@
 					
 						lifeLargura1 = 0;
 						lifeAltura1 = 0;
-						canvas.style.background="#910004";
+						/*canvas.style.background="#910004";*/
+						canvas.style.background="#711013";
 						
 					}if(life == -1){
 						console.log("GAME OVER!");
@@ -339,8 +332,8 @@
 				life3.src = 'image/life.png';
 				
 				c.drawImage(life1, 25, 30, lifeLargura1, lifeAltura1);
-				c.drawImage(life2, 90, 30, lifeLargura2, lifeAltura2);
-				c.drawImage(life3, 155, 30, lifeLargura3, lifeAltura3);
+				c.drawImage(life2, 105, 30, lifeLargura2, lifeAltura2);
+				c.drawImage(life3, 185, 30, lifeLargura3, lifeAltura3);
 				
 				
 				//Níveis
@@ -445,7 +438,7 @@
 				c.drawImage(imagem, jogadorPosicaoX, (canvas.height - jogadorAltura) - 100, jogadorLargura, jogadorAltura);
 
 				//chão
-				c.fillRect(0, 620, 1820, 20);
+				c.fillRect(0, 620, 1820, 30);
 				c.fillStyle="#3BBD62";
 			
 				c.fill();
