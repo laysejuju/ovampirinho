@@ -4,15 +4,15 @@
 		<meta charset="UTF-8">
 		<title>Vampirinho</title>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
-		<script src="input.js" type="text/javascript"></script>
-		<script src="jquery.mobile-1.4.5.js" type="text/javascript"></script>
-		
+		<script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+		<script src="js/jquery-2.1.1.js" type="text/javascript"></script>
+		<script src="js/input.js" type="text/javascript"></script>
     </head>   
     <body>
 		<div id="wrapper">
 				<canvas id="canvas" width="1820px" height="720px"></canvas> <!-- Tela criada-->
-				<div onmousedown="onLeft();" id="left" class="control"></div>
-				<div onmousedown="onRight();" id="right" class="control"></div>
+				<div id="left" class="control"></div>
+				<div id="right" class="control"></div>
 				<div id="menuInicial" class="menu">
 					<div id="record">AJUDE O VAMPIRINHO A PEGAR 100 DENTES</div>
 					<div onclick="inicializar();" id="jogar" class="botao">GO!</div>
@@ -58,5 +58,30 @@
 				</audio>
 				
 		</div>
+		
+		
+		<script>
+			// Right Move
+				$( "#right" )
+				  .mouseup(function() {
+					clearInterval(moveRight);
+					e.preventDefault();
+				  })
+				  .mousedown(function(e) {
+					moveRight = setInterval (onRight, 45);
+					e.preventDefault();
+				 });
+				 
+			// Left Move
+				$( "#left" )
+				  .mouseup(function() {
+					clearInterval(moveLeft);
+					e.preventDefault();
+				  })
+				  .mousedown(function(e) {
+					moveLeft = setInterval (onLeft, 45);
+					e.preventDefault();
+				 });
+		</script>
 	</body>
 </html>

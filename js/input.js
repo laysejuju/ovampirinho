@@ -1,4 +1,4 @@
-	var iniciar, jogadorAltura, jogadorLargura, jogadorPosicaoX, velocidadeJogador, bolaLargura, bolaAltura, bolaDiametro, bolaPosX, bolaPosY, velocidadeBola, cruzLargura, cruzAltura, cruzPosX, cruzPosY, velocidadecruz, score, life, lifeLargura1, lifeAltura1, lifeLargura2, lifeAltura2, lifeLargura3, lifeAltura3, lifePosX, lifePosY, velocidadeLife, colisao;
+	var iniciar, moveRight, moveLeft, jogadorAltura, jogadorLargura, jogadorPosicaoX, velocidadeJogador, bolaLargura, bolaAltura, bolaDiametro, bolaPosX, bolaPosY, velocidadeBola, cruzLargura, cruzAltura, cruzPosX, cruzPosY, velocidadecruz, score, life, lifeLargura1, lifeAltura1, lifeLargura2, lifeAltura2, lifeLargura3, lifeAltura3, lifePosX, lifePosY, velocidadeLife, colisao;
 
 	var playx = 450,
 		playy = 270;
@@ -115,8 +115,10 @@
 				document.getElementById("left").addEventListener("onmouseup", function(){
 					
 					
-				});*/
+				});*/	
+
 				
+												
 				function onLeft(){
 					
 					if(jogadorPosicaoX > 0)
@@ -129,12 +131,12 @@
 
 				function onRight(){
 					if(jogadorPosicaoX < (canvas.width - jogadorLargura))
-						{
-							jogadorPosicaoX += 45;
+						{						
+								jogadorPosicaoX += 45;		
 						}
 					//jogadorPosicaoX +=25;
 					console.log("Right!");
-				}
+				} 
 			
 			//Win!
 			function win(){
