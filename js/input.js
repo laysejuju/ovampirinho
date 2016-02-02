@@ -385,7 +385,7 @@
 					velocidadeBola = 27;
 					velocidadecruz = 38;
 				}
-				if(score >= 1){
+				if(score >= 100){
 					velocidadeBola = 30;
 					velocidadecruz = 31;
 					win();
