@@ -16,7 +16,7 @@
 				<div id="menuInicial" class="menu">
 					<div id="record">AJUDE O VAMPIRINHO A PEGAR 100 DENTES</div>
 					<div onclick="inicializar();" id="jogar" class="botao">GO!</div>
-					<div id="help">&lt;&lt;Use os cantos nas laterais para&gt;&gt; controlar o vampirinho</div>
+					<div id="help">&lt;&lt;Para mover&gt;&gt;</div>
 					<!--<div id="record">MELHOR PLACAR</div>-->
 					
 					<!--<div id="recordValue">0</div>-->
@@ -30,7 +30,7 @@
 				
 				<div id="win">
 					<h1>Parabéns! Você conseguiu!<h1>
-					<div onclick="inicializar();" id="jogar3" class="botao">De novo?</div>
+					<div onclick="inicializar();" id="jogar3" class="botao">GO?</div>
 				</div>
 				
 				<div id="gameOver" class="logo"></div>
@@ -62,26 +62,26 @@
 		
 		<script>
 			// Right Move
-				$( "#right" )
-				  .mouseup(function() {
-					clearInterval(moveRight);
-					e.preventDefault();
-				  })
-				  .mousedown(function(e) {
+				$("#right").bind( "touchstart", function(e){
 					moveRight = setInterval (onRight, 45);
 					e.preventDefault();
-				 });
+				});		
+
+				$("#right").bind( "touchend", function(e){
+					clearInterval(moveRight);
+					e.preventDefault();
+				});
 				 
 			// Left Move
-				$( "#left" )
-				  .mouseup(function() {
-					clearInterval(moveLeft);
-					e.preventDefault();
-				  })
-				  .mousedown(function(e) {
+				$("#left").bind( "touchstart", function(e){
 					moveLeft = setInterval (onLeft, 45);
 					e.preventDefault();
-				 });
+				});		
+
+				$("#left").bind( "touchend", function(e){
+					clearInterval(moveLeft);
+					e.preventDefault();
+				});							 
 		</script>
 	</body>
 </html>

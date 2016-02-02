@@ -161,7 +161,12 @@
 					document.getElementById('gameOver').style.display="block";
 					document.getElementById('menuGameOver').style.display="block";
 					document.getElementById('jogar2').innerHTML="GO!";
-					document.getElementById('pontuacao').innerHTML=score + "</br>" + "DENTES";
+					if(score == 1){
+						document.getElementById('pontuacao').innerHTML=score + " DENTE";
+					}else{
+						document.getElementById('pontuacao').innerHTML=score + " DENTES";
+					}
+					
 					
 					//Botão Reset
 					function clicouReset(e){

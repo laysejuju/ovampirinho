@@ -49,12 +49,7 @@ body{
     background-color: #DBC300;
 }
 
-#menuInicial{
-    height: 377px;
-}
-
 #menuGameOver{
-    height: 377px;
 	display: none;
 }
 
@@ -63,14 +58,14 @@ body{
     color: #fff;
     /* width: 72%; */
     height: 20%;
-    max-width: 338px;
+    max-width: 200px;
     /* position: absolute; */
     top: 0px;
     margin: 0 auto;
     /* margin-left: 3em; */
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 11px;
+    padding-bottom: 11px;
 	font-size: 40pt;
 	font-family: 'Patrick Hand SC', cursive;
 }
@@ -78,20 +73,19 @@ body{
 #pontuacao{
 	font-size: 30pt;
     text-align: center;
-    margin-top: 40px;
+    margin: 20px 0;
 }
 
 #help{
-	/* margin-top: 3em; */
-    margin: 2em auto 1em auto;
+    margin: 19px auto 20px auto;
     max-width: 409px;
 	font-size: 16pt;
     text-align: center;
 }
 
 #record{
-	margin: 2em auto 1em auto;
-    max-width: 380px;
+	margin: 35px auto 1em auto;
+    max-width: 290px;
     font-size: 15pt;
     text-align: center;
 	
@@ -128,8 +122,12 @@ body{
     width: 50%;
 }
 
+#win h1{
+	font-size: 19pt;
+}
+
 #jogar3{
-	margin-top: 154px;
+	margin-top: 90px;
     background-color: #DBC300;
 	color: #000;
 }
