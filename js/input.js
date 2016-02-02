@@ -27,6 +27,7 @@
 
 			canvas.style.background="#0C1222";
 			
+				winSound.load(); // re-load the audio
 				denteUp.pause();
 				perdeLife.pause();
 				winSound.pause();
