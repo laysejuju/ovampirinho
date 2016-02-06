@@ -2,8 +2,9 @@
 
 	var playx = 450,
 		playy = 270;
-	
-			//Função Reiniciar o Jogo
+		
+
+			//Função Reiniciar o Jogo	
 			function reset(){
 				location.reload();
 			}
